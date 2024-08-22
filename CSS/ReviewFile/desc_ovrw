@@ -1,0 +1,932 @@
+/* inline - within the line of tag.
+internal  - withing the page (using <style></style>). 
+external  - seperate web page.
+
+External style sheets are reusable-
+
+1)colors - 
+        hsl
+        hsla
+        hexadecimal
+        rgb
+        color names
+
+2)Back Ground Color:        
+
+        1)background: red;
+        2)background-color: red;
+
+        3)background-image: url("");
+        4)background-repeat: no-repeat; - otherValues(repeat-x, repeat-y, repeat, none..etc);
+        5)background-size:cover; -  otherValues(auto,contain);
+        6)background-position:bottom; - otherValues(top, left, right etc...)
+
+        7)background-attachment: fixed; - otherValues(scroll, etc..) - it helps in getting an parallax effect.
+
+
+        8)background: url("") no-repeat center/cover fixed; - it is an short hand property.
+
+
+
+
+        **-------Gradient Colors-------**
+
+                1)linear Gradient
+                2)Radial Gradient
+                
+                background-image: linear-gradient(blue, greenyellow), url("");
+
+                background-image: linear-gradient(to bottom, red, green, yellow), url(""); - even directions can be given.
+
+                background-image: radial-gradient(
+                rgba(255, 0, 0, 0.426),rgba(0, 128, 0, 0.18)),url("");
+
+
+3) Filters:
+
+        
+                1)filter: blur(10%);
+                2)filter: brightness(50%);
+                3)filter: contrast(20%);
+                4)filter: grayscale(20%);
+                5)filter: saturate(60%);
+
+                grabient.io or webgradien.com; are some of the places where you can find the cool predefined filters.
+
+4)Font - 
+        font-size: 1px / 1rem / 1em / 50%
+
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        font-style:italic,bold,etc..
+
+        font-weight:100-900,bold,light,etc.        
+
+5)border -
+        border-style:solid;
+        border-width:1px;
+        border-color:white;
+        
+        border:1px solid black
+
+        border-radius:20px;
+
+    specificity:
+
+        border-bottom: 5px dotted green;
+        border-top: 5px solid yellow;
+        border-left: 5px dotted red;
+        border-right: 5px  solid violet;
+
+6)Shadows:
+
+        text-shadow: 3px 3px 5px hsl(0, 100%, 50%), -3px -3px 5px hsl(188, 89%, 51%);        
+
+        text-shadow:horizontal_offset,vertical_offset,shadow or blur,color;
+
+        box-shadow: 3px 3px 5px;
+
+7)Inheritence:
+
+        Inheritence is when we declare something on an element, and it also applies tht elements decendant.
+
+                here, typography will be inherited to the child classes.
+
+                        ex: font-family, font-size, font-style, font-weight, color, etc...
+
+                whereas layouts cant be inherited.so in such cases we need to use inherit keyword to inherit the propeties which are normally not inheritable.
+
+                        ex:position, display propeties, width, height, margin , padding, etc...
+
+                        to inherit we use -   .child{
+                                                 background:inherit;
+                                               }    
+
+
+8)Margins:
+
+        margin: 50px;
+
+    WAY APPLIED:
+
+        margin:30px (ALL SIDES)
+        margin:1px 2px;(TOP & BOTTOM , LEFT & RIGHT)
+        margin:1px 3px 5px;(TOP , LEFT&RIGHT , BOTTOM)
+        margin:5px 4px 3px 2px (TOP , RIGHT , BOTTOM , LEFT)
+
+    Specificity:
+
+        margin-top: 50px
+        margin-left: 50px;
+        margin-bottom: 50px;
+        margin-right: 50px;
+
+    Auto:
+        
+        margin: auto; CENTRES THE THE DIV OR ELEMENT
+        margin-top: auto; TAKES SPACE AT TOP AND PUSHES TO BOTTOM
+        margin-left: auto;
+        margin-bottom: auto;
+        margin-right: auto;
+
+9)Float:
+        float:left;
+        float:right;
+        float - allows other elements to flow around it.
+        
+        display:flow-root; - anything that is floating will stay within the container.
+
+10)Overflow:
+
+        it is an property that sets the desired behaviour when content does not fit in the parent elemet box(overfows).
+
+            overflow: auto;
+            overflow: hidden;
+
+            overflow: clip; used with
+            overflow-clip-margin:size(13px or 1em etc..)
+
+
+            overflow: scroll;
+            overflow: auto;
+
+11)Display:
+
+        display property specifies if/how an element is displayed.
+        
+        block-level - start on a new-line take up the full width available (h1,div,p,form,header,footer)
+
+        inline - do not start on a new line, width is limited to what is needed (span, a, img).
+
+            ex:div{
+                background-color: red;
+                }
+                span{
+                    background-color: blueviolet;
+                }
+            
+            *NOTE: WIDTH AND HEIGHT CAN BE APPLIED TO BLOCK LEVEL ELEMENT.
+
+            *WHEREAS IT IS NOT IN CASE OF INLINE ELEMENT.
+            
+            *TO DO SO WE USE DISPLAY PROPETY.
+
+
+                display: block; - turns elements to block level elements.
+
+                display: inline; - turns elements to inline level elements.
+
+                display: inline-block; - it is inline element but width and height can be applied.
+
+                display:none; - element is erased and effected element  takes no space.
+
+                visibility:hidden; - makes the element invisible but by doing so it occupies the space.
+
+
+12)Css Heights and Widths:
+
+        height:100px; (px,em,rem,%)
+        width:100px;  (px,em,rem,%)
+
+    specificity:
+        
+        max-width: 75%;
+        min-width: 75%;
+        max-height: 75%;
+        min-heigt: 75%;
+
+    Box-Sizing:
+
+         box-sizing: border-box;
+         box-sizing: content-box;
+
+    viewport width and viewport height
+        
+        1)height: 100vh; tells about the height taken by the content or elements on the basis of webpage.
+
+            here(100vh - full height of web page)
+
+        
+        2)width: 100vw; - tells about the width taken by the content or elements on the basis of webpage.
+
+            NOTE: So it is basically sizing relative to the size of webpage.
+            like,rem & em.
+
+13)Css Positions:
+        
+        1)relative - positioned relative to where it normally exists.
+        2)fixed    - positioned relative to the viewport.  
+        3)absolute - positioned relative to nearest ancestor 
+        4)sticky   - positioned based on the scroll position.
+        5)static   - default position for an element. 
+
+                position: relative;
+                position: fixed;
+                position: absolute;
+                position: sticky;
+                position: static;
+
+        directions:
+
+                top: 0px;
+                bottom: 0px;
+                right: 0px;
+                left: 0px;
+
+                Note: These direction elements can even hold the negative values.
+
+                ex: top: -100px;
+
+
+        NOTE: Whenever absolute and fixed are given as position values to the position property, then the remaining divs or the elemens that are either preceding or succeding the f&p div's will shift their positions on the basis of idea that f&p valued div's do not exist.          
+
+14)Css Combinators:
+            
+        combinators explain the relationship between listed selectors.
+        
+              = descendent (space = descendent)
+            > = child 
+            ~ = general sibling (all the siblings to the container)
+            + = adjacent sibling (nearest sibling to the container)
+
+            EX :    div p{
+
+                    }
+
+                    div~p{
+
+                    }
+
+                    div>p{
+
+                    }
+
+                    div+p{
+
+                    }
+
+            NOTE: ALL CHILDS ARE DESCENDENTS BUT NOT ALL DESCENDENTS ARE CHILDREN.
+
+
+        2)Attr selectors:
+
+                ex:     <a href="one">Hi</a>
+                        a[href="one"] {
+                                color: orange;
+                        }
+
+                        img[alt:"nature"]{
+                                color:"red";
+                        }
+
+                        so here if the <a> tag contains the one in href value then selector inside statements gets executed.
+
+
+15)Psuedo  Classes:
+
+        Pseudo classes are the keywords that are added to the selector, they help in modifying  the behviour of element when they is a  change in state. 
+        
+               EX1:WHEN PSEUDO CLASSES ARE IMPLEMENTED ON ANCHOR TAG
+               
+                a:link{
+                color: rgb(42, 40, 209);
+                }
+                a:hover{
+                color: red;
+                font-size: 1.1em;
+                }
+                a:active{
+                color: green;
+                font-size: 1.1em;
+                }
+                a:visited{
+                color: blue;
+                } 
+
+              EX2:WHEN PSEUDO CLASSES ARE IMPLEMENTED ON LISTS
+
+                li:hover{
+                background-color: red;
+                }
+
+                li:not(:hover){  //It has an effect on element when it is not in a hover state(i.e other than hover state)
+
+                background-color: blueviolet;
+                }
+
+                li:nth-child(2){  //It takes some other values like odd,even,3n,4n,3n+2 
+                  background-color: yellow;
+                } 
+                        Note:here n starts from 0.
+ 
+16)Pseudo-Element:
+        
+        pseudo elements are keywords that are added to a selector that is used to add a style to specific part of an element.
+
+               Ex:selector:pseudo-element
+
+                h1::first-letter{
+                font-size: 2em;
+                font-style: italic;
+                }
+
+                p::first-line{
+                background-color: yellow;
+                }
+
+                p::selection{
+                background-color: rgb(28, 28, 28);
+                color: green;
+                }
+
+                #fruit li::before{
+                content: "😂";
+                }
+
+                #apple::after{
+                content: "🍎";
+                }
+
+                #fruit li::marker{
+                   content:"✅"
+                }
+        
+        NOTE: PSUEDO ELEMENTS HAS :: SYMBOL BETWEEN SELECTOR AND ITSELF.
+        
+        SOME FEW PSEUDO ELEMENTS WE SEEN ARE :
+        (first-letter,first-line,selection,before,after,marker etc..)
+
+
+17)Css website Layout:
+        semantic tags - Keep your content organized 
+                        Better for SEO.        
+                        Assists screen readers and other tech for accessiblity.
+
+                <header>  - introductory content
+                <nav>     - navigation bar, links
+
+                <main>    - main content(section, aside, article, div)
+                <section> - dependent content
+                <aside>   - side content
+                <article> - independent content (not really in a context to the website)
+
+                <footer>  - closing content.
+
+
+                @media screen and (max-width:600px){
+                        aside,section,article{
+                        width: 100%;
+                
+                } - it makes the screen ratio to be changed at 100% if at all the screen ratio of window decreases more than 600px.
+
+
+18)Css Flex Box:
+
+        It is one dimensional layout system that we can use to create a row or a column axis layout.
+
+        It gives you the tools to create basic and advanced website layouts in flexible and responsive ways.
+
+        it also gives space distribution between items in an interface and powerfull alignment capabilties.
+
+
+        NOTE: Inorder to work with flex box we need to have an container.
+        simply y0u cannot work with divs in an container.
+
+
+                display: flex;
+                         -->initializes flex box.
+
+
+                1)Flex Directions:
+
+                        flex-direction: row;  - usually it is row by default.
+                        flex-direction: column; makes the flex in column direction
+                        flex-direction: row-reverse; - makes the row to be reversed (i.e 1234 --to--> 4321)
+
+                        flex-direction: column-reverse;- makes the column to be reversed.
+
+
+                2)Flex Flow:
+                
+                        flex-flow: row wrap; - flex flow is an alternative property that has the functionality of both (flex-direction & flex-wrap).
+
+                        ex: flex-flow: column wrap; - this property makes the content to be wrapped and shift its direction to column.
+
+                2)Justify Content:
+
+                   justify-content: ;  - aligns or justify  items on main axis  (row)
+
+                   values accepted:
+
+                        1)justify-content: flex-start; 
+                        2)justify-content: flex-end; 
+                        3)justify-content: center; 
+
+                        4)justify-content: space-between; 
+                        5)justify-content: space-around;
+                        6)justify-content: space-evenly; 
+
+                3)Align Items:
+                
+                    Controls the alignment of items on the current line, or along the cross axis.
+
+                        1)align-items: flex-start;
+                        2)align-items: flex-end;
+                        3)align-items: center;
+                        4)align-items: baseline; online 
+
+                4)Align Content:
+                    
+                    Controls the space between flex lines on the cross axis or along the cross axis across lines of a flex container.
+
+                        1)align-content: flex-start; 
+                        2)align-content: flex-end;
+                        3)align-content: center;
+                        4)align-content: space-evenly;
+                        5)align-content: space-around;
+                        6)align-content: space-between; 
+
+
+
+
+                       it's default value is stretch.   
+
+                    NOTE: Align-Content HAS NO EFFECT ON SINGLE LINE CONTAINERS.
+
+                    Man work hard of course you cannot see the results immediately but it is sure that at one day you see it and feel blessed.
+
+                    So,Work hard as you never achieved and prepare hard as you never failed.
+
+                    Thrive for learning new things not for success.
+
+                    Wake up with Determination and go to sleep with Satisfaction.
+
+                5)Flex Wrap:
+
+
+                        1)flex-wrap: wrap; 
+                        2)flex-wrap: nowrap;    
+                        3)flex-wrap: wrap-reverse; 
+
+                        Note: here flex-wrap is (no wrap) by default.
+
+                6)Gaps:
+                   
+                   Creates a grap between flex items.
+
+                        1)row-gap: 2em;
+                        2)column-gap: 2em;
+
+                7)Self:
+
+                   We can use align-self and justify-self to shift single or particular flex items.
+
+                        1)align-self: flex-start;
+                        2)align-self: center;
+                        3)align-self: flex-end;
+
+                                ex: #box2{
+                                        background-color: yellow;
+                                        align-self: center;
+                                        order: 1;
+                                     }
+
+                        1)justify-self:flex-start; - need to be known?
+
+                   NOTE: It do not have space-around, space-between and  space-even properties.     
+
+                8)order:
+                        
+                  It takes numeric values so based on that it changes the positions of flex items.
+
+                      1)order:  1; - makes(1234 --to--> 2341)  i.e +1 to shift to last position
+                      2)order: -1; - makes(2341 --to--> 1234)  i.e -1 to shift to 1st position
+
+
+                NOTE: In css flex box each item has an default order value of 0.
+
+                        if incremented ---> backwards i.e(+1,+2,+3) - more the number last the position.
+
+                        if decremented ---> forwards i.e(-1,-2,-3) - less the number first the position.
+
+                9)Grow:
+
+                   The flex-grow property specifies how much the items will grow relative to the rest of the flexible items inside the same container.
+
+                   it's default value is 0.
+
+                   flex-grow:1;
+                   flex-grow:2;
+
+               10)Basis:
+
+                   The flex-basis property specifies the initial length fo a flexible item.  
+
+                   Note: If the element is not a flexible item, the flex-basis property has no effect.  
+
+                   it's default value is auto.
+
+                   flex-basis:10px;
+
+                11)Shrink:
+
+                    The flex-shrink property specifies how the item will shink relative to the rest of the flexible items insde the same container.     
+
+                    Note: If the element is not a flexible item, then flex-shrink property has no  effect.
+
+                    it's default value is 1.
+
+                    flex-basis:                           
+
+19)Grid Layout:
+
+    Grid is mainly used to align elements in a 2d way i.e rows and columns.
+
+     it is more efficient than flex box.
+
+        1)Grid Line: The grid line can be either horizontal or vertical which is used to seperate items in the grid.
+
+        2)Grid track: A grid track is the space betwween two adjacentacent grid lines.
+
+        3)Grid Cell: A grid cell are areas seperated by four grid line and they are then smallest unit you have in the grid.  (Like Ms Excel Blocks.)
+
+        4)Grid Area: A grid area is one or more grid cells that make up a rectangualr area on the grid.
+
+---------------------------------------------------------------------------------------------------------------------
+
+        display:grid; - initializes grid layout.
+
+                1)Grid template rows:
+
+                        1)grid-template-rows: 110px 120px 170px 180px ;
+
+
+                2)Grid Template Columns:
+
+                        1)grid-template-columns: 200px 200px 250px 120px; - allocates 4 blocks of space but does'nt occupy until end of page.
+
+                        2)grid-template-columns: 200px 200px 250px auto; - allocates space to first 3 elem on the basis of size but the last elem will completely occupy the end of page
+
+
+                        3)grid-template-columns: 200px 200px 250px 1fr; - allocates space to first 3 elem on the basis of size but the last elem will completely occupy the end of page.
+
+                         ****similar to auto.****
+
+
+                        4)grid-template-columns: 200px 150px 2fr 1fr; - last 2elem occupies the remaining page on the basis of frames.
+
+                        5)grid-template-columns: repeat(4, auto); - repeat creates 4 blocks of space that occupies unitl end of page.(same size)
+
+                        6)grid-template-columns: repeat(4, 200px); - repeat creats 4 blocks of space where each block occupies 200px of size. 
+
+                        7)grid-template-columns: repeat(4, minmax(300px,1fr)); - repeat creates 4 blocks of space where each block occupies 300px of size and they cant be reduced more than that. max occupied by each elem is 1frame.
+
+
+                        8)grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); - each div occupies min of 200px and max of 1fr, if at all we try to reduce the size of div to less than 200px then they automatically jumps or wraps to the next line due to auto-fit.
+
+                        9)grid-template-columns: auto auto auto auto; - 4 divs allocated with  equal space but they completely occupy the whole page.
+
+
+
+                3)Grid Gap:
+
+                        1)grid-gap: 10px; - creates space both row and column wise.
+
+                        2)grid-row-gap: 5px; - creates space only in row wise.
+                            
+                        3)grid-column-gap:2px ; - creates space only in column wise.
+
+                4)Grid Auto Columns:
+
+                        1)grid-auto-flow: row; - divs are seen vertically
+                        2)grid-auto-flow: column; divs are seen horizontally.  
+
+
+                
+                5)Grid Auto Columns: 
+
+                        1)grid-auto-columns: 200px; - each div occupies 200px and they align in vertical way,but not completely.
+
+                        2)grid-auto-row: 200px; - each div occupies 200px and they align in vertical way.
+                        but they occupies the whole space.
+
+
+
+                6)Grid Area:
+
+
+                        .hero{
+                                grid-template-areas: "myArea myArea . . ." ". . . myArea2 myArea2 ";
+                        }
+                        .box1{
+                                grid-area:myArea
+                        }
+                        .box2 {
+                                grid-area: myArea2;
+                        } 
+
+
+                        grid-area: 1 / 2 / span 2 / span 2; 
+                        row start / column start / row end / column end / 
+
+
+                        NOTE: TO CENTRE A TEXT IN DIV WE CAN USE 2 METHODS I.e
+
+                                1) display: grid;
+                                align-items: center;
+                                justify-items: center;
+
+                                2) place-items:center;
+
+
+                We can also use some names like given below so to understand more about it listen at (6:05:50 secs)
+
+                
+                
+                        .container{
+                                padding: 20px;
+                                background-color: rgb(34, 34, 34);
+                                height: 100vh;
+                                grid-template-columns: [start] 100px 100px 100px 100px 100px [end];   
+                        }
+
+
+                        /*Style Placed on all the elem like aside section header nav footer etc.. */
+
+                        .s {                    
+                        padding: 20px;
+                        background-color: rgb(84, 84, 84);
+                        text-align: center;
+                        color: white;
+                        }    
+
+                        header {
+                        grid-column: start/end;
+                        }
+
+
+                7) Fill:
+
+                        1)auto-fill : It is mainly used to automatically fill the div's or elems in the complete screen without specifying the number of div's.  
+
+                        Note: It requiers space as an value.  Ex:
+
+                        2)auto-fit: It is mainly used to fit the  div's or elems in the whole grid by specifying the size. 
+
+                        Note: It requiers space as an value.  Ex:
+
+                        It is mainly usefull if we know size of each div but if we don't have any idea about how many div's we want of that size.      
+
+
+
+
+20)Media Queries:
+
+                Media Queries are used to provide dfferent styles for differnet devices by their features like width hight orientaiton etc.
+
+                And we call this website as responsive websites.
+
+                We can make responsive websites in 2 steps:
+
+                        1) Desktop-First:  Starting by creating Desktop version and later adjusting the screen ratios for other displays like tabs and smart phones.
+
+                        2) Mobile-First:  Starting by creating Mobile version and later adjusting the screen ratios and styles for other displays like tabs, laptops and desktops.
+
+
+                        Most of the developers use mobile-first approach. and later they create Desktop version. as it is easy to do so.
+
+                        Media Queries - Media Conditions.
+
+                        There are basically 4 types of Media:
+                          
+                             1)Screen (desktops, tabs, smart-phones etc..)
+                             2)Print(printers)
+                             3)Speech(Screen Readers)
+                             4)All (For all media types)
+
+                             here all is at default.
+   
+
+                Links and Sources:      
+
+                        https://codepip.com/games/sourcery/
+
+
+21)Calc() Function:
+
+                It is a built in function in Css that basically does calculation of values.
+
+                It accepts addition,substraction,multiplication,division,
+
+                i.e width:calc(100px+100px);
+                    height:calc(200px-100px);
+                    padding:calc(4px * 5);
+                    margin:calc(50px / 5);
+
+
+22)Mix Blend Mode:
+
+        The mix-blend-mode CSS property sets how an element's content should blend with the content of the element's parent and the element's background.
+
+        ex:  mix-blend-mode:multiply;
+        ex:  mix-blend-mode:darken;
+        ex:  mix-blend-mode:lighten;
+        ex:  mix-blend-mode:color-dodge;
+        ex:  mix-blend-mode:difference;
+        ex:  mix-blend-mode:exclusion;
+        ex:  mix-blend-mode:hue;
+        ex:  mix-blend-mode:saturation;
+        ex:  mix-blend-mode:color;
+        ex:  mix-blend-mode:color-burn;
+        ex:  mix-blend-mode:luminosity;
+        ex:  mix-blend-mode:overlay;
+
+
+        We can also use these with gradients.
+
+        We can also mix 2 img's at once.
+                so to make it happen we can use background-blend-mode:multiply,screen; 
+
+23) :is() pseudo selector:
+
+                section:is(h1,h2,h3,h4,h5){
+
+                }
+
+                :is(section,article,nav,aside):is(h1,h2,h3,h4,h5,h6){
+                        color:blue;
+                }
+
+                It basically reduces the number of lines of code that is required to select elements.
+
+                tStamp:(6:59:30 secs)
+
+23) ::before,::after pseudo selector:
+
+        The ::before selector inserts something before the content of each selected element(s).
+
+        Use the content property to specify the content to insert.
+
+
+        The ::before and ::after pseudo-elements in CSS allows you to insert content onto a page without it needing to be in the HTML. While the end result is not actually in the DOM, it appears on the page as if it is.
+
+
+        p::before {
+                content: "bye";
+                background: red;
+                font-size: 20px;
+                font-weight: 100px;
+                color: white;
+        }
+
+24) :not() Psuedo Selector:
+
+        The CSS :not selector is used for excluding specific elements from a selection, allowing for more refined and targeted styling. By leveraging this pseudo-class, developers can create sophisticated stylesheets that apply rules conditionally.
+
+        Ex1:    body {
+                        background-color: #333;
+                        color: #fff;
+                        padding: 2rem;
+                }
+
+                .section {
+                        width: 42em;
+                        margin: 0 auto;
+                        background-color: rgb(32, 32, 32);
+                        padding: 4rem;
+                }
+
+                .section .article :not(.content) {
+                        color: red;
+                }
+
+        
+        Ex2:    .section button :not([disabled]){
+                        /*propertys*/
+                }  ---> mainly for the attributes.
+
+
+        Ex3:    .section a :not([href*="https://www.youtube.com"]){
+                text-decoration:none;
+        }
+
+25)Variables in Css:
+
+26)Dry Css:
+
+        DRY - Do not repeat your self..
+
+        KISS - Keep it simple Stupid!..
+
+        eX: provide 2classes where 1class has common name for both elems and the other class has diff names for both elems, so that we can commonly apply css to both elems using class1 and also we can uniquely apply styles to each elem using the other remaining class2.
+
+        
+                
+          <button class="btn btn-primary">Hi</button>
+          <button class="btn btn-secondary">Download</button>
+
+          .btn{
+                /* for commonly applying styles on both the btn's (btn-1,btn-2) */
+          }
+          .btn-primary{
+                /* for uniquely applying styles to btn-1*/
+          }
+
+
+26)Transformation, Transition, & Animations:
+
+
+        1)Transformation:
+
+                        1)transform: translate(100px,300px); - Moves 100px towards x-axis(right) and 300px towards y-axis(down).
+
+                        2)transform: translateX(100px); - Moves 100px forward in the direction of x-axis.
+
+                        3)transform: translateY(-200px); - Moves 200px top in the direction of y-axis.
+
+                        4)transform: rotate(20deg); - rotates the div or block 20degrees.
+
+                        5)transform: scale(2); 
+
+                                /* --> default 1. 1 time of current size */
+
+                                It basically increases the div by n times the value given in scale().
+
+                        6)transform: scale(0.5,2); - It takes 2 values where it increases 0.5 times on the x-axis and 2 times on the y-axis.
+
+                        7)transform: skew(50deg); Brings an Parralelogram shape.
+
+
+                        Note: Most of these properties take both negative and positive values.
+
+        2)Transition:
+
+                               1) transition-property: all;
+                               2) transition-duration: 2s;
+                               3) transition-timing-function: ease-in; (otherValues ease-out,ease)
+
+
+                               Visit Cubic-Bezier.com website.
+
+                               Note: We need to have an specify state for an element inorder to have transitions.
+
+        3)Animations:
+
+                In this chapter you will learn about the following properties:
+
+                        1)@keyframes
+                        2)animation-name
+                        3)animation-duration
+                        4)animation-delay
+                        5)animation-iteration-count
+                        6)animation-direction
+                        7)animation-timing-function
+                        8)animation-fill-mode
+                        9)animation
+
+
+
+                *An animation lets an element gradually change from one style to another.
+
+                *You can change as many CSS properties you want, as many times as you want.
+
+                *To use CSS animation, you must first specify some keyframes for the animation.
+
+                *Keyframes hold what styles the element will have at certain times.
+
+
+                ex:     .container > div {
+                                width: 300px;
+                                height: 300px;
+                                background-color: darkblue;
+
+                                animation-name: inAndOut; -  name of animation.
+
+                                animation-duration: 4s; - duration of animation.
+
+                                animation-iteration-count: infinite; - no of times animation repeated.
+
+                                animation-timing-function:ease-in; - use cubic-beizer (7:49:50 secs)
+                        }
+
+                        @keyframes inAndOut {
+                                0% {
+                                transform: scale(2);
+                                }
+                                25% {
+                                transform: scale(0.2);
+                                background: teal;
+                                transform: skew(10deg);
+                                }
+                                50% {
+                                background: blue;
+                                transform: skew(40deg);
+                                border-radius: 50%;
+                                }
+                        }
+
+
+                
+
+
+*/

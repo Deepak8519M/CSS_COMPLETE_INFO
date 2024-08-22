@@ -1,0 +1,124 @@
+/* * {
+  margin: 0;
+}
+
+.container {
+  padding: 20px;
+  background-color: rgb(34, 34, 34);
+  height: 100vh;
+
+  /* Grid Stuff Here */
+
+/* display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px; */
+
+/* .s {
+  /*Style Placed on the all the elem like aside section header nav footer etc.. */
+
+/*  padding: 20px;
+  background-color: rgb(84, 84, 84);
+  text-align: center;
+  color: white; */
+
+/* p::before {
+  content: "bye";
+  background: red;
+  font-size: 20px;
+  font-weight: 100px;
+  color: white;
+} */
+
+/* aside {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+
+
+
+.box1 {
+  background-color: grey;
+  height: 500px;
+  width: 800px;
+  margin: auto;
+  color: white;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+.box1,
+.box5 {
+  background-color: red;
+}
+.box2,
+.box6 {
+  background-color: greenyellow;
+}
+.box3,
+.box7 {
+  background-color: yellow;
+}
+.box4,
+.box8 {
+  background-color: skyblue;
+}
+.hero div {
+  padding: 30px;
+}
+.hero h1 {
+  color: white;
+}
+.hero {
+  display: grid; */
+/* grid-template-rows: 110px 120px 170px 180px ; */
+/* grid-template-columns: 200px 200px 250px 120px; */
+
+/* grid-template-columns: 200px 200px 250px auto; */
+/* grid-template-columns: 200px 200px 250px 1fr; */
+/* grid-template-columns: 200px 150px 2fr 1fr; */
+/* grid-template-columns: repeat(4, auto); */
+
+/* grid-template-columns: repeat(4, 200px); */
+/* grid-template-columns: repeat(4, 200px) */
+
+/* grid-template-columns: repeat(4, minmax(300px,1fr)); */
+
+/* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+/* grid-template-columns: auto auto auto auto; */
+/* grid-gap: 10px; */
+
+/* grid-auto-columns: 200px; */
+
+/* grid-auto-columns: 200px; */
+
+/* grid-auto-flow: row; */
+/* grid-auto-flow: column; */
+
+/* grid-template-areas: "myArea myArea . . ." ". . . myArea2 myArea2 "; */
+
+/* .box1 {
+  /* grid-area: 1 / 2 / span 2 / span 2; */
+/* row start / column start / row end / column end / */
+
+/* grid-area: myArea; */
+/* 
+.box2 {
+  grid-area: myArea2;
+}  */

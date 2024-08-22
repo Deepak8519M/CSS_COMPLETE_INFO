@@ -1,0 +1,29 @@
+body {
+  margin: 0px;
+}
+main {
+  margin: 20px 30px;
+}
+h1 {
+  text-align: center;
+}
+.navbar ul {
+  list-style-type: none;
+  background-color: hsla(0, 0%, 25%);
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+.navbar a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  float: left;
+}
+
+.navbar a:hover {
+  background-color: hsl(0, 0%, 9%);
+}

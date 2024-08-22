@@ -1,0 +1,28 @@
+body {
+  font-size: 22px;
+}
+p {
+  color: purple;
+}
+
+.gray {
+  color: gray;
+}
+#second {
+  font-style: italic;
+}
+h1 {
+  font-size: 22;
+}
+h1,
+h2 {
+  color: blue;
+}
+
+.high {
+  background-color: orangered;
+  text-transform: uppercase;
+}
+* {
+  font-family: monospace;
+}

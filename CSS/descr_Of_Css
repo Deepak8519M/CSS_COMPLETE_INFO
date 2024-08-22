@@ -1,0 +1,450 @@
+<!--<style>
+      p {
+        color: limegreen;
+      }
+    </style> -->
+
+    <!--Here css can be linked to html file in 3 ways:
+            1.Internal style sheet
+            2.External style sheet
+            3.Within the code as an attr-->
+    <!--But the best way to use style sheets is external style sheet-->
+
+    <!--form elem does not inherit the font settings-->
+
+    ---------------------------------------------
+    <!--1.element selector is least specific
+    p {
+          color: purple;
+    }
+   ---------------------------------------------        
+    whereas 2.class selector is more specific
+    .gray {
+            color: gray;
+    }
+   --------------------------------------------- 
+    and 3.id selector is most most specific
+    #second {
+           font-style: italic;
+    }
+    ---------------------------------------------     
+
+-->
+
+    <!--important is mainly used to ruin or it changes the structure and effect on code - a small doubt on this need to clarified. 
+    
+    We can use specificity calculator to understand why one selector is applying over the other-->
+
+    <!--properties learned as of now:
+        1.font-size - to inc the font size
+        2.font-family - applied to collection of blocks in html to change the font
+        ex:for main,body,etc...
+        3.line-height - 
+        4.background or background_color - to change the backg color
+        5.color - to change the color
+        6.text-transform - uppercase or lowercase
+        7. border:22px solid black - to make a border of solid black with 1px
+        8.width - increases the len of elem in sideways. used with percentage - (refer line 102)******
+        9.
+        -->
+
+    <!--here in color : rgb(x,y,z) takes 3 values and gives o/p color based on that
+    
+    color : can even accept hex_Values o.e 0-9 and A - F so the lowest value is color:#000000(for black)
+    color:#ffffff(for white)
+    color:#ff0000(for red)
+    color:#00ff00(for green)
+    color:#0000ff(for blue)
+
+    hex codes can also be shown in search palette
+    
+    also if we have color code same for all 6 digits then we can make it a pair and consider it as 1 i.e
+    #ffffff - fff
+and #000000 - 000
+    #ff0000 - f00->
+
+    <!- hsl - huge saturation and lightness
+        hsla -huge saturation and lightness alpha channel
+        
+        
+        hsl(range:0-360,0-100%,0-50%)
+        color ranges or color block
+        left block specific color
+        square hover block 
+        
+        ->
+    
+    <!- colors famously used in the video
+        #333 - i.e #333333 simialar to black->
+
+        <!-Tools:
+        coolors.co is great color palette picking tool 
+
+        press space bar for rand colors
+        
+        Web Aim contrast checker 
+        or color contrast checker
+        ->
+
+<!- ---Units and sizes ---
+        
+    
+    LENGTHS PART:
+
+        1)The absolute value we use in css is px
+        
+        2)And its default value is 16px
+        
+        3)absolute font size can alter the users interests on font size settings
+
+    PERCENTAGES PART:
+
+     1) header{
+                width:100%
+        }
+        h1{
+                border: 2px dashed red;
+                width: 50%;
+        }
+
+        here by placing width consecutively in both header and h1.It makes h1 to have an effect on the effected width by the header also here 100% is at default.
+    
+    RELATIVE PATH:
+
+        1) rem (root element) - font sizeof root elem.
+        whenever we place rem in font-size there is no effect on the elem by its parent elem but it does effected by root elem.
+     
+        2)em - using ems make the font to be amplified by the parent elem (If you have doubt listen at 1:01:37 sec)
+     
+        3)rem and em calc for padding
+     
+        font-size: 3rem;
+        padding: 0.5em;
+
+        here we divide (3rem/0.5em) we get = 1.5 rem
+
+        basically  1em = 1.5 rem;
+
+        since default value is 16 px
+
+        so we get rem =16 px 
+
+        i.e the padding length is 16*1.5 = 24 px
+     
+
+        4)ch(character width) - makes only certain no of char to exist before line wrap
+        
+        ex:width:40ch; makes only 40 ch to exist.
+        
+        5) vw and vh(view port width and view port height)
+
+        listen at 1:08:24 sec to understand
+
+        it mainly leads for showing scroll bar which is not uncomfortable.
+
+        body{
+        min-height: 100vh; makes body elem with whole height of the page.
+        
+        }
+     ->
+
+     <!- ---Box Model---
+     
+     *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    } this is helpful for the default margin and it is easy to understand when changes are made.
+
+    1)we can use border box and content box.
+
+    but content box is only the lenght for the content so it does change the definition
+
+    so we use border box which takes consideration of the content,padding and border length i.e if len= 400 then (content:364px,padding:16*2px,border:2*2px)
+
+    margin does not include in the calculation.
+
+    2)/*  margin-top: 1.5em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    margin-left: 2em; creates an space all the sides (TSTMP:1:25:19)*/
+    
+    top right bottom left order is the way in which the effect takes place.
+    margin: 1.5em 2em 2em 1.5em;
+    i.e     
+
+    same for the padding 
+    padding: 1.5em 2em 3em 4em;
+            
+
+    same in the case of borders:
+
+    border-top: 5px solid ;
+    border-right: 10px dotted;
+    or  if specificity is required
+    border-top-width:5px
+    border-top-style:5px
+    border-top-color:5px
+
+
+    Border TYPES:
+
+    1)border : 1px double
+    2)border : 1px outline
+    2)border : 1px solid etc MDN LINK NEED TO BE PASTED ******
+
+    border-radius : 50% to make it an circle.
+
+
+
+     3)outline: 5px solid purple; ->does'nt come into calculation
+
+     outline-offset: 5px; moves further 5px from the box. we can also make it negative so the outline comes inside the box model.
+  
+
+->
+
+
+<!- --- Typorgraphy --- 
+
+    It is the way the text gets arraged and presented 
+
+
+    1.font: inherit;
+    used to inherit the fonts from the parent
+    since button and input tags are not effected when  font effect is applied to its parent we use it
+
+    1.text-decoration:
+
+        text-decoration: underline; - makes the line under the text.
+
+        text-decoration: overline; - makes the line over the text.
+ 
+
+        text-decoration: line-through; -  makes the line through the text.mainly use for span items.
+
+        text-decoration: none; - no line effect is added it is mainly used in the cases of anchor tags.
+ 
+    2.text-transform:
+ 
+        text-transform: capitalize; - makes the starting letter of every word to be captilized.
+
+        text-transform: lower case; - all letters lower case.
+
+        text-transform: uppercase; - all letters uppercase.
+
+    3.text-align:
+    
+        text-align: left; - text towards left.here the right side is not uniform
+
+
+        text-align: justify; - it is used to justify the right text into uniform way.
+
+        text-align: right;
+        text towards right.here left side is not uniform.
+
+    4.text-indent:2em; - here we use em's to indent the gap.
+
+    NOTE: type text so you can get some recommendations
+
+    5.line-height: 1.5; - increase the line of height.
+
+        other than units it can even accept the numbers.It's default value is   1.2;
+    6.letter-spacing: 0.1em; - increases space between letters.
+
+
+    7.word-spacing: 0.5em; - increases space between words.
+  
+    8.font-properties:
+
+        1.font-weight: 900; - it makes the text either to look bolder or lighter.
+
+        it takes the values from 100 to 900. and also some other values like bold bolder lighter etc
+        
+          * 100 - lighter
+          * 900 - bolder
+
+        2.font-style: oblique; - makes a change in font style.
+        it takes the values such as italic,none,etc.
+
+        3.font-family: fantasy;
+        makes a change in style of the font.
+
+            it would take some other generic value such as 
+
+                * san-serif
+                *serif
+                *monospace
+                *cursive
+
+            font-family: 'Courier New', Courier, monospace; - it is mainly used as an fallback so that if one text does'nt support the font then the next text will be enabled.
+        
+            * here we use "" if the font has space.
+
+                some other famously use fonts are:
+
+                1.font-family: Arial, Helvetica, sans-serif;
+
+                2.font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+                3.'Times New Roman', Times, serif;
+    9.CSS LINKS:
+
+        1.cursor: not-allowed;
+        makes a change in cursor style when cursor is hovered onto the font.
+
+        Note: if a link is used to visit a website it changes into purple color.
+
+        else if it is not clicked then it is in blue color.
+
+        2.Pseudo class: used to resemble the current state of the element.
+
+            ex: a:visited {
+                    color: purple;
+                }
+
+                a {
+                text-decoration: none;
+                cursor: pointer;
+                color: blue;
+                }
+
+                a:hover {
+                color: dodgerblue;
+                }
+
+                a:active {
+                color: red;
+                }
+
+
+                //here visited class has more specificity than normal anchor tag. go and  check in specifcity calc.
+
+                opacity: 0.8; it is used to add opacity to any selector so we need to use it wisely.
+
+                or we can also use it with hsl by adding the 4th value
+
+    10. Css Lists:
+
+        1.list-style-type: lower-alpha; - it makes the bullet points style to change.
+
+             it takes some other values such as 
+             *georgian;
+             *decimal;
+             *decimal-leading-zero;
+             *disc;
+             *circle;
+             *upper-roman etc.
+
+        <li value="22">Step one</li> also used to have effect on bullet  points.  listen(2:31:45sec)
+
+        2.text-align: center; - makes the text aligned to centre.
+
+        but here the bullet points are not changed
+
+        so we use list-style-position: inside; so that the bullets move towards left.
+
+        here some browsers have outside as the default value.
+
+
+         list-style-image: url(''); used  to add img as an checkpoint.
+
+        list-style: square url(''); - used as an fallback so that if the img does not load the square gets into the play.
+
+            li{
+                color: red;
+            } - makes all the lists in the ul an ol to red
+
+            ul li{
+                color: red;
+            } - makes only the lists in ul to be red
+
+            ul li:nth-child(2){
+                color: red;
+            } - makes the 2nd lists in the ul to be red
+
+            ul li:nth-child(odd){
+                color: red;
+            }-makes the odd li's in ul to be red. and also even can be applied.
+
+            li:last-child a{
+                   border-radius: 0 0 2rem 2rem;
+            }
+
+            
+            PSEUDO ELEM(IT ALWAYS HAS ::)::marker {
+                color: red;
+                font-family: fantasy;
+                font-size: 1em;
+                content: "Only 5$>>";
+            } - it is mainly used to have effect on bullet points.
+             
+                and content tag is used to have text as an bullet.
+
+                we can also add specificity by adding ol or ul.
+
+                It makes the inline elem to block.
+                li a{
+                    display: block;
+                }
+}
+
+    11.CSS Display:
+
+                margin and height cannot be applied inline elements whereas padding can be applied.but it over laps 
+
+                display: inline-block; -  helps in making some proprties applied on inline display.
+ 
+                inline-block -  is used to 
+}
+
+    12.CSS Floats:
+
+        1.div.block.right -  <div class="block right"></div>
+
+        2.The container i.e section tag in this file enlarges based on the content but not on the basis of div class.
+
+        3.This is needed to be rectified
+
+        4.It can be done in 2 ways 
+            1.overflow : auto; - makes the container to exist full so that the div element can exist i.e floated either left or right.
+
+            2.but the correct way is
+                display: flow-root;
+                    previously used to create columns.
+
+        Summary : so basically floats are used to float elements either to left or right based on the necessity.It can even be applied to containers.
+
+    13.CSS COLUMNS :
+
+        1.column-count: 4; - Makes 4 columns that is inscribed with text.
+
+        2.column-width: 250px; - It describes colmns width so that based on the width the colmns gets created.
+
+        3.Instead of above 2 steps we can apply in one step. i.e
+            columns: 4 250px;
+
+        4.column-rule: 3px solid black;
+
+        5.column-gap: 3rem; - makes an extraspacing.
+
+        6.margin collapsing - Need to be known!!!.
+
+        7.break-inside: avoid; - It does'nt makes the header to split top and bottom.
+
+        8.break-before: column; - it forces to have a column break
+        but not a great property.
+
+        9.resources for character entity references;
+            1.unicode/table.com
+            2.https://symbl.cc/en/
+
+        10.column-span: all; - makes span for all columns
+
+        11. .columns p{} has more specificity than
+            .quote{} class selector.
+
+        12. white-space: nowrap; - text does'nt shift singlely but does happen when grouped and by using this property.
+    
+
+->

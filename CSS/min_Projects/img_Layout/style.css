@@ -1,0 +1,22 @@
+.gallery {
+  display: inline-block;
+  border: 2px solid hsl(0, 1%, 66%);
+  width: 200px;
+}
+.gallery .description {
+  text-align: center;
+  font-size: 1.3em;
+  color: hsl(0, 0%, 0%);
+  padding: 5px;
+}
+.gallery:hover {
+  border: 2px solid black;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+.gallery .description::selection {
+  background-color: black;
+  color: darkgreen;
+}
