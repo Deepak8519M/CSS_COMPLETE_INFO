@@ -6,7 +6,7 @@ file named desc_Of_Css which contains a few properties and their descriptions.
 
 And also there is a folder named Css Overview which contains some basic and 
 
-newly  added topics of Css. - A Big shoutout to huxn_Dev, i have created the notes from his css lecture.
+newly  added topics of Css. - A Big shoutout to huxn_Web_Dev, i have created the notes from his css lecture.
 
 do checkout when required all files were added 
 
